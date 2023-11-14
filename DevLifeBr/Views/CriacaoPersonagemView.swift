@@ -10,6 +10,7 @@ import SwiftUI
 struct CriacaoPersonagemView: View {
     @ObservedObject var viewModel = CriacaoPersonagemViewModel()
     @State private var personagemCriado = false
+    var gerenciadorDeUsuario: GerenciadorDeUsuario
 
 
     var body: some View {
@@ -44,14 +45,18 @@ struct CriacaoPersonagemView: View {
                 }
                 .onTapGesture {
                     viewModel.criarPersonagem()
-                    self.personagemCriado = true // Atualiza a flag para navegação
+                    viewModel.onPersonagemCriado = {
+                        self.personagemCriado = true
+                        gerenciadorDeUsuario.salvarUsuario(nome: viewModel.personagem.nome, idade: viewModel.personagem.idade)
+                    }
                 }
             }
             .navigationBarTitle("Criar Personagem")
-            .navigationDestination(isPresented: $personagemCriado) {
-                PaginaPrincipalView()
+
+            // NavigationLink oculto para navegação programática.
+            NavigationLink(destination: PaginaPrincipalView(), isActive: $personagemCriado) {
+                EmptyView()
             }
-            .navigationBarTitle("Criar Personagem")
         }
     }
 }
@@ -60,6 +65,6 @@ struct CriacaoPersonagemView: View {
 
 struct CriacaoPersonagemView_Previews: PreviewProvider {
     static var previews: some View {
-        CriacaoPersonagemView()
+        CriacaoPersonagemView(gerenciadorDeUsuario: GerenciadorDeUsuario())
     }
 }

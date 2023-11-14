@@ -8,7 +8,6 @@
 import Foundation
 import Firebase
 
-
 // ViewModel para a tela de criação de personagem.
 class CriacaoPersonagemViewModel: ObservableObject {
     @Published var personagem = Personagem(nome: "", idade: 18, sexo: .outro)
@@ -18,19 +17,21 @@ class CriacaoPersonagemViewModel: ObservableObject {
 
     // Função para criar um novo personagem.
     func criarPersonagem() {
-         let personagemId = UUID().uuidString
-         db.collection("Personagens").document(personagemId).setData([
-             "nome": personagem.nome,
-             "idade": personagem.idade,
-             "sexo": personagem.sexo.rawValue
-         ]) { err in
-             if let err = err {
-                 print("Erro ao adicionar o personagem: \(err)")
-             } else {
-                 print("Personagem adicionado com ID: \(personagemId)")
-                 UserDefaults.standard.set(true, forKey: "PersonagemCriado")
-                 self.onPersonagemCriado?() // Chama o callback
-             }
-         }
-     }
+        let personagemId = UUID().uuidString
+        db.collection("Personagens").document(personagemId).setData([
+            "nome": personagem.nome,
+            "idade": personagem.idade,
+            "sexo": personagem.sexo.rawValue
+        ]) { err in
+            if let err = err {
+                print("Erro ao adicionar o personagem: \(err)")
+            } else {
+                print("Personagem adicionado com ID: \(personagemId)")
+                UserDefaults.standard.set(true, forKey: "PersonagemCriado")
+                UserDefaults.standard.set(personagemId, forKey: "PersonagemId")
+                self.onPersonagemCriado?() // Chama o callback
+            }
+        }
+    }
 }
+
