@@ -24,6 +24,9 @@
 		3DADBF282B0416F900CE6D70 /* CriacaoPersonagemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DADBF272B0416F900CE6D70 /* CriacaoPersonagemView.swift */; };
 		3DADBF2A2B041EB600CE6D70 /* PaginaPrincipalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DADBF292B041EB600CE6D70 /* PaginaPrincipalView.swift */; };
 		3DADBF2D2B0425E800CE6D70 /* GerenciadorDeUsuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DADBF2C2B0425E800CE6D70 /* GerenciadorDeUsuario.swift */; };
+		3DADBF2F2B043CEC00CE6D70 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DADBF2E2B043CEC00CE6D70 /* TabView.swift */; };
+		3DADBF352B043D5300CE6D70 /* Habilidades.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DADBF342B043D5300CE6D70 /* Habilidades.swift */; };
+		3DADBF372B043D5900CE6D70 /* Empregos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DADBF362B043D5900CE6D70 /* Empregos.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,9 @@
 		3DADBF272B0416F900CE6D70 /* CriacaoPersonagemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriacaoPersonagemView.swift; sourceTree = "<group>"; };
 		3DADBF292B041EB600CE6D70 /* PaginaPrincipalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaPrincipalView.swift; sourceTree = "<group>"; };
 		3DADBF2C2B0425E800CE6D70 /* GerenciadorDeUsuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GerenciadorDeUsuario.swift; sourceTree = "<group>"; };
+		3DADBF2E2B043CEC00CE6D70 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		3DADBF342B043D5300CE6D70 /* Habilidades.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habilidades.swift; sourceTree = "<group>"; };
+		3DADBF362B043D5900CE6D70 /* Empregos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Empregos.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +181,9 @@
 			children = (
 				3DADBF272B0416F900CE6D70 /* CriacaoPersonagemView.swift */,
 				3DADBF292B041EB600CE6D70 /* PaginaPrincipalView.swift */,
+				3DADBF2E2B043CEC00CE6D70 /* TabView.swift */,
+				3DADBF342B043D5300CE6D70 /* Habilidades.swift */,
+				3DADBF362B043D5900CE6D70 /* Empregos.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -329,8 +338,11 @@
 			files = (
 				3DADBF262B0416DC00CE6D70 /* CriacaoPersonagemViewModel.swift in Sources */,
 				3DADBEED2B040BF900CE6D70 /* ContentView.swift in Sources */,
+				3DADBF2F2B043CEC00CE6D70 /* TabView.swift in Sources */,
 				3DADBF282B0416F900CE6D70 /* CriacaoPersonagemView.swift in Sources */,
 				3DADBF2A2B041EB600CE6D70 /* PaginaPrincipalView.swift in Sources */,
+				3DADBF372B043D5900CE6D70 /* Empregos.swift in Sources */,
+				3DADBF352B043D5300CE6D70 /* Habilidades.swift in Sources */,
 				3DADBF2D2B0425E800CE6D70 /* GerenciadorDeUsuario.swift in Sources */,
 				3DADBF222B0416A600CE6D70 /* Personagem.swift in Sources */,
 				3DADBEEB2B040BF900CE6D70 /* DevLifeBrApp.swift in Sources */,
