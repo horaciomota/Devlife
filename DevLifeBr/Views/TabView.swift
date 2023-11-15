@@ -15,7 +15,7 @@ struct Tabbar: View {
                     Label("Home", systemImage: "house")
                 }
 
-            Habilidades()
+            HabilidadesView()
                 .tabItem {
                     Label("Skills", systemImage: "brain.head.profile")
                 }
