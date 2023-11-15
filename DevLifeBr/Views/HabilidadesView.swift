@@ -38,11 +38,11 @@ struct HabilidadesView: View {
 
                             VStack(alignment: .leading, spacing: 8) {
                                 Text(habilidade.name)
-                                    .font(.headline)
+                                    .font(.custom("CourierNewPSMT", size: 18))
                                     .foregroundColor(.black)
                                     .frame(minWidth: 100, alignment: .leading)
                                 Text(habilidade.description)
-                                    .font(.subheadline)
+                                    .font(.custom("CourierNewPSMT", size: 18))
                                     .foregroundColor(.gray)
                                     .frame(minWidth: 100, alignment: .leading)
                             }

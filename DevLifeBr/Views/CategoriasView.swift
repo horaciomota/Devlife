@@ -25,6 +25,7 @@ struct CategoriasView: View {
                             VStack { // Utilizando um VStack para envolver o conteúdo
                                 NavigationLink(destination: HabilidadesView(categoria: categoria)) {
                                     Text(categoria.categoryName)
+                                        .font(.custom("CourierNewPSMT", size: 18))
                                         .foregroundColor(Color.black)
                                 }
                                 .frame(maxWidth: .infinity, alignment: .leading)

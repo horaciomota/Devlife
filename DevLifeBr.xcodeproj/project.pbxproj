@@ -31,6 +31,7 @@
 		3DADBF3D2B0442CA00CE6D70 /* HabilidadesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DADBF3C2B0442CA00CE6D70 /* HabilidadesView.swift */; };
 		3DADBF3F2B055A4000CE6D70 /* CategoriasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DADBF3E2B055A4000CE6D70 /* CategoriasView.swift */; };
 		3DADBF412B055E6B00CE6D70 /* AtributoHabilidade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DADBF402B055E6B00CE6D70 /* AtributoHabilidade.swift */; };
+		3DADBF492B0584F500CE6D70 /* Courier.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3DADBF482B0584F500CE6D70 /* Courier.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,8 @@
 		3DADBF3C2B0442CA00CE6D70 /* HabilidadesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabilidadesView.swift; sourceTree = "<group>"; };
 		3DADBF3E2B055A4000CE6D70 /* CategoriasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriasView.swift; sourceTree = "<group>"; };
 		3DADBF402B055E6B00CE6D70 /* AtributoHabilidade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtributoHabilidade.swift; sourceTree = "<group>"; };
+		3DADBF482B0584F500CE6D70 /* Courier.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Courier.ttf; sourceTree = "<group>"; };
+		3DADBF4A2B05854500CE6D70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +132,8 @@
 		3DADBEE92B040BF900CE6D70 /* DevLifeBr */ = {
 			isa = PBXGroup;
 			children = (
+				3DADBF4A2B05854500CE6D70 /* Info.plist */,
+				3DADBF482B0584F500CE6D70 /* Courier.ttf */,
 				3DADBF2B2B0425E100CE6D70 /* Helpers */,
 				3DADBF202B04169F00CE6D70 /* Models */,
 				3DADBF242B0416C800CE6D70 /* Views */,
@@ -321,6 +326,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DADBF492B0584F500CE6D70 /* Courier.ttf in Resources */,
 				3DADBEF32B040BFA00CE6D70 /* Preview Assets.xcassets in Resources */,
 				3DADBEEF2B040BFA00CE6D70 /* Assets.xcassets in Resources */,
 				3DADBF162B040C1900CE6D70 /* GoogleService-Info.plist in Resources */,
@@ -525,6 +531,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DevLifeBr/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -563,6 +570,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DevLifeBr/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
