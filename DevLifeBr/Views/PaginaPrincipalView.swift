@@ -9,25 +9,38 @@ import SwiftUI
 
 struct PaginaPrincipalView: View {
     @StateObject private var gerenciadorDeUsuario = GerenciadorDeUsuario()
-    @State private var personagemExiste = true // Declare a variável personagemExiste aqui
+    @State private var personagemExiste = true
 
 
     var body: some View {
-        VStack {
-            if personagemExiste {
-                Text("Bem-vindo ao DevLifeBrasil!")
-                Text("Nome: \(gerenciadorDeUsuario.nome)")
-                Text("Idade: \(gerenciadorDeUsuario.idade)")
-            } else {
-                CriacaoPersonagemView(gerenciadorDeUsuario: gerenciadorDeUsuario)
+        ZStack {
+            Color.black.edgesIgnoringSafeArea(.all)
+            VStack {
+                if personagemExiste {
+                    Text("Bem-vindo ao DevLifeBrasil!")
+                        .font(.title)
+                        .foregroundStyle(Color.bege)
+                    Text("Nome: \(gerenciadorDeUsuario.nome)")
+                        .font(.subheadline)
+                        .foregroundStyle(Color.bege)
+                    Text("Idade: \(gerenciadorDeUsuario.idade)")
+                        .font(.subheadline)
+                        .foregroundStyle(Color.bege)
+                } else {
+                    CriacaoPersonagemView(gerenciadorDeUsuario: gerenciadorDeUsuario)
+                }
+            }
+            .onAppear {
+                gerenciadorDeUsuario.verificarPersonagemExistente { existe in
+                    personagemExiste = existe
+                }
             }
         }
-        .onAppear {
-                   gerenciadorDeUsuario.verificarPersonagemExistente { existe in
-                       personagemExiste = existe
-                   }
-        }
-        }
+    }
+}
+
+extension Color {
+    static let bege = Color(red: 0.96, green: 0.96, blue: 0.86)
 }
 
 

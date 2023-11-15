@@ -12,48 +12,72 @@ struct CriacaoPersonagemView: View {
     @State private var personagemCriado = false
     var gerenciadorDeUsuario: GerenciadorDeUsuario
 
-
     var body: some View {
         NavigationView {
-            Form {
-                // Campo para o nome do personagem.
-                TextField("Nome", text: $viewModel.personagem.nome)
-                // Campo para a idade do personagem.
-                TextField("Idade", value: $viewModel.personagem.idade, formatter: NumberFormatter())
+            ZStack {
+                Color.black.edgesIgnoringSafeArea(.all)
 
-                // Seleção do sexo do personagem.
-                Picker("Sexo", selection: $viewModel.personagem.sexo) {
-                    ForEach(Sexo.allCases) { sexo in
-                        Text(sexo.rawValue).tag(sexo)
+                VStack {
+                    TextField("Nome", text: $viewModel.personagem.nome)
+                        .foregroundColor(Color.bege)
+                        .padding()
+                        .background(Color.black)
+                        .cornerRadius(5)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 5)
+                                .stroke(Color.bege, lineWidth: 1)
+                        )
+                        .padding(.bottom, 5)
+
+
+                    TextField("Idade", value: $viewModel.personagem.idade, formatter: NumberFormatter())
+                        .foregroundColor(Color.bege)
+                        .padding()
+                        .background(Color.black)
+                        .cornerRadius(5)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 5)
+                                .stroke(Color.bege, lineWidth: 1)
+                        )
+                        .padding(.bottom, 5)
+
+                    Picker("Sexo", selection: $viewModel.personagem.sexo) {
+                        ForEach(Sexo.allCases) { sexo in
+                            Text(sexo.rawValue).tag(sexo)
+                        }
                     }
-                }
+                    .pickerStyle(SegmentedPickerStyle())
+                    .background(Color.gray.opacity(0.2))
+                    .cornerRadius(5)
+                    .padding()
 
-                // Botão personalizado para criar personagem.
-                     Button(action: {
-                         viewModel.criarPersonagem()
-                         viewModel.onPersonagemCriado = {
-                             self.personagemCriado = true
-                             gerenciadorDeUsuario.salvarUsuario(nome: viewModel.personagem.nome, idade: viewModel.personagem.idade)
-                         }
-                     }) {
-                         Text("Criar Personagem")
-                             .foregroundColor(.white)
+                    Button(action: {
+                        viewModel.criarPersonagem()
+                        viewModel.onPersonagemCriado = {
+                            self.personagemCriado = true
+                            gerenciadorDeUsuario.salvarUsuario(nome: viewModel.personagem.nome, idade: viewModel.personagem.idade)
+                        }
+                    }) {
+                        Text("Criar Personagem")
+                            .foregroundColor(.black)
                              .padding()
-                             .background(Color.black)
+                             .frame(maxWidth: .infinity)
+                             .background(Color.yellow)
                              .cornerRadius(10)
-                             .overlay(
-                                 RoundedRectangle(cornerRadius: 10)
-                                     .stroke(Color.black, lineWidth: 2)
-                             )
-                     }
-                 }
-                 .navigationBarTitle("Criar Personagem")
-                 .navigationDestination(isPresented: $personagemCriado) {
-                     PaginaPrincipalView()
-                 }
-             }
-         }
-     }
+                    }
+                    .padding()
+                }
+                .padding()
+            }
+            .navigationBarTitle("Criar Personagem", displayMode: .inline)
+            .navigationDestination(isPresented: $personagemCriado) {
+                PaginaPrincipalView()
+            }
+        }
+        .accentColor(.blue) // Isso define a cor de acento para elementos de navegação e seleção
+    }
+}
+
 
 
 

@@ -10,7 +10,7 @@ import Firebase
 
 // ViewModel para a tela de criação de personagem.
 class CriacaoPersonagemViewModel: ObservableObject {
-    @Published var personagem = Personagem(nome: "", idade: 18, sexo: .outro)
+    @Published var personagem = Personagem(nome: "@username", idade: 18, sexo: .outro)
     var onPersonagemCriado: (() -> Void)? // Callback
 
     private var db = Firestore.firestore()
