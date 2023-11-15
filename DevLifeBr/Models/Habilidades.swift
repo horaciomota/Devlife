@@ -35,3 +35,5 @@ struct CategoriaHabilidade: Identifiable, Codable {
 struct DadosHabilidades: Codable {
     var Skills: [CategoriaHabilidade]
 }
+
+

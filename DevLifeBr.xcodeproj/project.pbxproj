@@ -29,6 +29,8 @@
 		3DADBF392B04403800CE6D70 /* Habilidades.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DADBF382B04403800CE6D70 /* Habilidades.swift */; };
 		3DADBF3B2B04420900CE6D70 /* HabilidadesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DADBF3A2B04420900CE6D70 /* HabilidadesViewModel.swift */; };
 		3DADBF3D2B0442CA00CE6D70 /* HabilidadesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DADBF3C2B0442CA00CE6D70 /* HabilidadesView.swift */; };
+		3DADBF3F2B055A4000CE6D70 /* CategoriasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DADBF3E2B055A4000CE6D70 /* CategoriasView.swift */; };
+		3DADBF412B055E6B00CE6D70 /* AtributoHabilidade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DADBF402B055E6B00CE6D70 /* AtributoHabilidade.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		3DADBF382B04403800CE6D70 /* Habilidades.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habilidades.swift; sourceTree = "<group>"; };
 		3DADBF3A2B04420900CE6D70 /* HabilidadesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabilidadesViewModel.swift; sourceTree = "<group>"; };
 		3DADBF3C2B0442CA00CE6D70 /* HabilidadesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabilidadesView.swift; sourceTree = "<group>"; };
+		3DADBF3E2B055A4000CE6D70 /* CategoriasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriasView.swift; sourceTree = "<group>"; };
+		3DADBF402B055E6B00CE6D70 /* AtributoHabilidade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtributoHabilidade.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +173,7 @@
 			children = (
 				3DADBF212B0416A600CE6D70 /* Personagem.swift */,
 				3DADBF382B04403800CE6D70 /* Habilidades.swift */,
+				3DADBF402B055E6B00CE6D70 /* AtributoHabilidade.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -190,6 +195,7 @@
 				3DADBF2E2B043CEC00CE6D70 /* TabView.swift */,
 				3DADBF362B043D5900CE6D70 /* Empregos.swift */,
 				3DADBF3C2B0442CA00CE6D70 /* HabilidadesView.swift */,
+				3DADBF3E2B055A4000CE6D70 /* CategoriasView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -348,11 +354,13 @@
 				3DADBF282B0416F900CE6D70 /* CriacaoPersonagemView.swift in Sources */,
 				3DADBF2A2B041EB600CE6D70 /* PaginaPrincipalView.swift in Sources */,
 				3DADBF372B043D5900CE6D70 /* Empregos.swift in Sources */,
+				3DADBF3F2B055A4000CE6D70 /* CategoriasView.swift in Sources */,
 				3DADBF392B04403800CE6D70 /* Habilidades.swift in Sources */,
 				3DADBF2D2B0425E800CE6D70 /* GerenciadorDeUsuario.swift in Sources */,
 				3DADBF222B0416A600CE6D70 /* Personagem.swift in Sources */,
 				3DADBF3D2B0442CA00CE6D70 /* HabilidadesView.swift in Sources */,
 				3DADBEEB2B040BF900CE6D70 /* DevLifeBrApp.swift in Sources */,
+				3DADBF412B055E6B00CE6D70 /* AtributoHabilidade.swift in Sources */,
 				3DADBF3B2B04420900CE6D70 /* HabilidadesViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
